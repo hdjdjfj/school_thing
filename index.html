@@ -1,0 +1,63 @@
+<head>
+  <title>a</title>
+</head>
+<body>
+  <p id="result">a</p>
+  <script>
+    var now = new Date();
+    var Day = now.getDay();
+    var Hour = now.getHours();
+    var Minute = now.getMinutes();
+    var result = Placeholder;
+    if (Day > 0 && Day < 5) {
+      if (Hour == 10 && Minute < 55) {
+        window.result = early;
+      }
+      if (Hour < 10) {
+        window.result = early;
+      }
+      if (Hour == 10 && Minute > 54) {
+        window.result = inz;
+      }
+      if (Hour == 11 && Minute < 16) {
+        window.result = inz;
+      }
+      if (Hour == 11 && Minute > 15 && Minute < 20) {
+        window.result = between;
+      }
+      if (Hour == 11 && Minute > 19) {
+        window.result = socialstudies;
+      }
+      if (Hour == 12 && Minute < 6) {
+        window.result = socialstudies;
+      }
+      if (Hour == 12 && Minute > 5 && Minute < 10) {
+        window.result = between;
+      }
+      if (Hour == 12 && Minute > 5 && Minute < 56) {
+        window.result = design;
+      }
+      if (Hour == 12 && Minute > 55) {
+        window.result = between;
+      }
+      if (Hour == 13 && Minute < 50) {
+        window.result = between;
+      }
+      if (Hour == 13 && Minute > 49) {
+        window.result = language;
+      }
+      if (Hour == 14 && Minute < 36) {
+        window.result = language;
+      }
+      if (Hour == 14 && Minute > 35) {
+        window.result = late;
+      }
+      if (Hour > 14) {
+        window.result = late;
+      }
+    } else {
+      window.result = nomeetingstoday;
+    }
+    document.getElementById("result").innerHTML = result
+  </script>
+</body>
