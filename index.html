@@ -8,56 +8,55 @@
     var Day = now.getDay();
     var Hour = now.getHours();
     var Minute = now.getMinutes();
-    var result = Placeholder;
+    var result = 0;
     if (Day > 0 && Day < 5) {
       if (Hour == 10 && Minute < 55) {
-        window.result = early;
+        window.result = 1;
       }
       if (Hour < 10) {
-        window.result = early;
+        window.result = 1;
       }
       if (Hour == 10 && Minute > 54) {
-        window.result = inz;
+        window.result = 2;
       }
       if (Hour == 11 && Minute < 16) {
-        window.result = inz;
+        window.result = 2;
       }
       if (Hour == 11 && Minute > 15 && Minute < 20) {
-        window.result = between;
+        window.result = 3;
       }
       if (Hour == 11 && Minute > 19) {
-        window.result = socialstudies;
+        window.result = 4;
       }
       if (Hour == 12 && Minute < 6) {
-        window.result = socialstudies;
+        window.result = 4;
       }
       if (Hour == 12 && Minute > 5 && Minute < 10) {
-        window.result = between;
+        window.result = 3;
       }
       if (Hour == 12 && Minute > 5 && Minute < 56) {
-        window.result = design;
+        window.result = 5;
       }
       if (Hour == 12 && Minute > 55) {
-        window.result = between;
+        window.result = 3;
       }
       if (Hour == 13 && Minute < 50) {
-        window.result = between;
+        window.result = 3;
       }
       if (Hour == 13 && Minute > 49) {
-        window.result = language;
+        window.result = 6;
       }
       if (Hour == 14 && Minute < 36) {
-        window.result = language;
+        window.result = 6;
       }
       if (Hour == 14 && Minute > 35) {
-        window.result = late;
+        window.result = 7;
       }
       if (Hour > 14) {
-        window.result = late;
+        window.result = 7;
       }
     } else {
-      window.result = nomeetingstoday;
+      window.result = 8;
     }
-    document.getElementById("result").innerHTML = result
   </script>
 </body>
