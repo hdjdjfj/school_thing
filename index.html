@@ -1,15 +1,12 @@
 <head>
   <title>a</title>
-</head>
-<body>
-  <p id="result">a</p>
-  <script>
+    <script>
     var now = new Date();
     var Day = now.getDay();
     var Hour = now.getHours();
     var Minute = now.getMinutes();
     var result = 0;
-    if (Day > 0 && Day < 5) {
+    if (Day > 0 && Day < 6) {
       if (Hour == 10 && Minute < 55) {
         window.result = 1;
       }
@@ -59,4 +56,7 @@
       window.result = 8;
     }
   </script>
+</head>
+<body>
+  <p>a</p>
 </body>
