@@ -22,25 +22,25 @@
       if (Hour < 10) {
         window.result = 1;
       }
-      if (Hour == 10 && Minute > 54) {
+      if (Hour == 10 && Minute >= 55) {
         window.result = 2;
       }
-      if (Hour == 11 && Minute < 16) {
+      if (Hour == 11 && Minute < 15) {
         window.result = 2;
       }
       if (Hour == 11 && Minute > 15 && Minute < 20) {
         window.result = 3;
       }
-      if (Hour == 11 && Minute > 19) {
+      if (Hour == 11 && Minute >= 20) {
         window.result = 4;
       }
-      if (Hour == 12 && Minute < 6) {
+      if (Hour == 12 && Minute < 5) {
         window.result = 4;
       }
       if (Hour == 12 && Minute > 5 && Minute < 10) {
         window.result = 3;
       }
-      if (Hour == 12 && Minute > 9 && Minute < 56) {
+      if (Hour == 12 && Minute > 9 && Minute <= 55) {
         window.result = 5;
       }
       if (Hour == 12 && Minute > 55) {
@@ -49,10 +49,10 @@
       if (Hour == 13 && Minute < 50) {
         window.result = 3;
       }
-      if (Hour == 13 && Minute > 49) {
+      if (Hour == 13 && Minute >= 50) {
         window.result = 6;
       }
-      if (Hour == 14 && Minute < 36) {
+      if (Hour == 14 && Minute <= 35) {
         window.result = 6;
       }
       if (Hour == 14 && Minute > 35) {
