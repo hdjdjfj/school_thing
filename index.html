@@ -15,58 +15,21 @@
   <p id ="result">a</p>
       <script>
     var now = new Date();
-    var Day = now.getDay();
-    var Hour = now.getHours();
+    var day = now.getDay();
+    var hour = now.getHours();
     var Minute = now.getMinutes();
-    var result = 0;
-    if (Day > 0 && Day < 5) {
-      if (Hour == 10 && Minute < 55) {
-        window.result = "early";
-      }
-      if (Hour < 10) {
-        window.result = "early";
-      }
-      if (Hour == 10 && Minute >= 55) {
-        window.result = "Class1";
-      }
-      if (Hour == 11 && Minute < 15) {
-        window.result = "Class1";
-      }
-      if (Hour == 11 && Minute >= 15 && Minute < 20) {
-        window.result = "between";
-      }
-      if (Hour == 11 && Minute >= 20) {
-        window.result = "Class2";
-      }
-      if (Hour == 12 && Minute < 5) {
-        window.result = "Class2";
-      }
-      if (Hour == 12 && Minute >= 5 && Minute < 10) {
-        window.result = "between";
-      }
-      if (Hour == 12 && Minute >= 10 && Minute < 55) {
-        window.result = "Class3";
-      }
-      if (Hour == 12 && Minute >= 55) {
-        window.result = "between";
-      }
-      if (Hour == 13 && Minute < 50) {
-        window.result = "between";
-      }
-      if (Hour == 13 && Minute >= 50) {
-        window.result = "Class4";
-      }
-      if (Hour == 14 && Minute < 35) {
-        window.result = "Class4";
-      }
-      if (Hour == 14 && Minute >= 35) {
-        window.result = "late";
-      }
-      if (Hour > 14) {
-        window.result = "late";
-      }
-    } else {
-      window.result = "NoMeetings";
+    var time = minute + 60 * hour
+    if (time < 655) {
+      var result = "early";
+    }
+    if (time >= 655 && time < 675) {
+      var result = "advisory";
+    }
+    if (time >= 675 && time < 680) {
+      var result = "between classes";
+    }
+    if (time >= 680 && time < 725) {
+      var result = "Social studies";
     }
     document.getElementById("result").innerHTML = result
   </script>
