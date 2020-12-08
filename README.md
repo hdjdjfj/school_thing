@@ -1,4 +1,4 @@
-if you're reading this, I dont really know how you found this file. All I use this for is to use github pages ot run this code. on my school ipad, i use the shortcuts app and its lame pseudocode to get the contents of the github pages site, then it joins the meeting corresponding to what the page says. the PDF is also here for me to view my meetings. i know this isn't clean code
+if you're reading this, I dont really know how you found this file. All I use this for is to use github pages to run this code. on my school ipad, i use the shortcuts app and its lame pseudocode to get the contents of the github pages site, then it joins the meeting corresponding to what the page says. the PDF is also here for me to view my meetings. i know this isn't clean code
 
 
 
