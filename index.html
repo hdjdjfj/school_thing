@@ -52,9 +52,11 @@
     }
     if (day > 0 && day < 5) {
       GetCurrentClass();
+    } else if (day == 6) {
+      window.result = "friday"
     } else {
       window.result = "no meetings today"
-      }
+    }
       document.getElementById("result").innerHTML = result;
   </script>
 </body>
