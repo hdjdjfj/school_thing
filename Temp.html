@@ -60,7 +60,7 @@
 
    function addElement () {
       // create a new div element
-      const newDiv = document.createElement("div");
+      const result = document.createElement("p");
 
       // and give it some content
       const newContent = document.createTextNode(window.result);
@@ -69,7 +69,7 @@
       newDiv.appendChild(newContent);
 
       // add the newly created element and its content into the DOM
-      document.body.appendChild(newDiv);
+      document.body.appendChild(result);
       }
   </script>
 </body>
