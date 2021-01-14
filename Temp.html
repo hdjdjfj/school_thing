@@ -1,76 +1,71 @@
-
-<head>
+ <head>
   <title>a</title>
   <style>
-    p {
-    font-size: 100px;
-    }
+p{
+font-size: 100px; }
   </style>
 </head>
 <body>
       <script>
-    var now = new Date();
-    var day = now.getDay();
-    var hour = now.getHours();
-    var minute = now.getMinutes();
-    var time = minute + 60 * hour
-    function GetCurrentClass() {
-      if (time < 655) {
-        window.result = "early";
-      }
-      if (time >= 655 && time < 675) {
-        window.result = "advisory";
-      }
-      if (time >= 675 && time < 680) {
-        window.result = "between classes";
-      }
-      if (time >= 680 && time < 725) {
-        window.result = "Class 1";
-      }
-      if (time >= 725 && time < 730) {
-        window.result = "between classes";
-      }
-      if (time >= 730 && time < 775) {
-        window.result = "Class 2";
-      }
-      if (time >= 775 && time < 780) {
-        window.result = "between classes";
-      }
-      if (time >= 780 && time < 825) {
-        window.result = "Class 3";
-      }
-      if (time >= 825 && time < 830) {
+       var now = new Date();
+       var day = now.getDay();
+       var hour = now.getHours();
+       var minute = now.getMinutes();
+       var time = minute + 60 * hour;
+       function GetCurrentClass() {
+         if (time < 655) {
+           window.result = "early";
+         }
+        if (time >= 655 && time < 675) {
+           window.result = "advisory";
+         }
+          if (time >= 675 && time < 680) {
           window.result = "between classes";
+         }
+         if (time >= 680 && time < 725) {
+          window.result = "Class 1";
+          }
+         if (time >= 725 && time < 730) {
+          window.result = "between classes";
+          }
+          if (time >= 730 && time < 775) {
+            window.result = "Class 2";
+         }
+         if (time >= 775 && time < 780) {
+            window.result = "between classes";
+        }
+         if (time >= 780 && time < 825) {
+           window.result = "Class 3";
+        }
+         if (time >= 825 && time < 830) {
+              window.result = "between classes";
+        }
+         if (time >= 830 && time < 875) {
+            window.result = "Class 4";
+         }
+          if (time >= 875) {
+             window.result = "after school"
+         }
+        }
+     if (day > 0 && day < 5) {
+       GetCurrentClass();
+      } else if (day == 6) {
+      window.result = "friday";
+      } else {
+    
+         window.result = "no meetings today";
       }
-      if (time >= 830 && time < 875) {
-          window.result = "Class 4";
-      }
-      if (time >= 875) {
-          window.result = "after school"
-      }
-    }
-  if (day > 0 && day < 5) {
-    GetCurrentClass();
-  } else if (day == 6) {
-    window.result = "friday"
-   } else {
-     window.result = "no meetings today"
-   }
-   document.body.onload = addElement;
-
-   function addElement () {
-      // create a new div element
-      const result = document.createElement("div");
-
-      // and give it some content
-      const newContent = document.createTextNode(window.result);
-
-      // add the text node to the newly created div
-      result.appendChild(newContent);
-
-      // add the newly created element and its content into the DOM
-      document.body.appendChild(result);
-      }
+       document.body.onload = addElement;
+     function addElement () {
+         // create a new div element
+        const result = document.createElement("p");
+        // and give it some content
+         const newContent = document.createTextNode(window.result);
+         // add the text node to the newly created div
+         result.appendChild(newContent);
+         // add the newly created element and its content into the DOM
+          document.body.appendChild(result);
+     }
   </script>
 </body>
-
+ 
