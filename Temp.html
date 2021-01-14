@@ -1,73 +1,71 @@
- <head>
-  <title>a</title>
-  <style>
-   p {
-     font-size: 100px; 
-   }
-   div {
-    width: 100%;
-    height: 100%;
-    background-color: red;
-   }
-  </style>
-</head>
-<body>
- <p>a</p>
-      <script>
-       var now = new Date();
-       var day = now.getDay();
-       var hour = now.getHours();
-       var minute = now.getMinutes();
-       window.time = minute + 60 * hour;
-       function GetCurrentClass() {
-         if (window.time < 655) {
-           window.result = "early";
-         }
-         if (window.time >= 655 && window.time < 675) {
-           window.result = "advisory";
-         }
-         if (window.time >= 675 && window.time < 680) {
-          window.result = "between classes";
-         }
-         if (window.time >= 680 && window.time < 725) {
-          window.result = "Class 1";
-         }
-         if (window.time >= 725 && window.time < 730) {
-          window.result = "between classes";
-         }
-         if (window.time >= 730 && window.time < 775) {
-          window.result = "Class 2";
-         }
-         if (window.time >= 775 && window.time < 780) {
-          window.result = "between classes";
-         }
-         if (window.time >= 780 && window.time < 825) {
-          window.result = "Class 3";
-         }
-         if (window.time >= 825 && window.time < 830) {
-          window.result = "between classes";
-         }
-         if (window.time >= 830 && window.time < 875) {
-          window.result = "Class 4";
-         }
-         if (window.time >= 875) {
-          window.result = "after school";
-         }
-       }
-       if (day > 0 && day < 5) {
-       GetCurrentClass();
-       } else if (window.day == 6) {
+<head>
+    <title>a</title>
+    <style>
+     p {
+       font-size: 100px; 
+     }
+     div {
+      width: 100%;
+      height: 100%;
+      background-color: red;
+     }
+    </style>
+  </head>
+  <body>
+    <script>
+        var now = new Date();
+        var day = now.getDay();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        window.time = minute + 60 * hour;
+        function GetCurrentClass() {
+            if (window.time < 655) {
+                window.result = "early";
+            }
+            if (window.time >= 655 && window.time < 675) {
+                window.result = "advisory";
+            }
+            if (window.time >= 675 && window.time < 680) {
+                window.result = "between classes";
+            }
+            if (window.time >= 680 && window.time < 725) {
+                window.result = "Class 1";
+            }
+            if (window.time >= 725 && window.time < 730) {
+                window.result = "between classes";
+            }
+            if (window.time >= 730 && window.time < 775) {
+                window.result = "Class 2";
+            }
+            if (window.time >= 775 && window.time < 780) {
+                window.result = "between classes";
+            }
+            if (window.time >= 780 && window.time < 825) {
+                window.result = "Class 3";
+            }
+            if (window.time >= 825 && window.time < 830) {
+                window.result = "between classes";
+            }
+            if (window.time >= 830 && window.time < 875) {
+                window.result = "Class 4";
+            }
+            if (window.time >= 875) {
+                window.result = "after school";
+            }
+        }
+        if (day > 0 && day < 5) {
+        GetCurrentClass();
+        } else if (day == 6) {
         window.result = "friday";
-       } else {
+        } else {
         window.result = "no meetings today";
-       }
-       function addElement() {
-        const resultText = document.createElement("div");
-        const newContent = document.createTextNode(window.result);
-        resultText.appendChild(newContent);
-        document.body.appendChild(resultText);
-       }
-       document.body.onload = addElement();
-      </script>
-</body>
- 
+        }
+        function addElement() {
+            const resultText = document.createElement("div");
+            const newContent = document.createTextNode(window.result);
+            resultText.appendChild(newContent);
+            document.body.appendChild(resultText);
+            }
+        document.body.onload = addElement();
+    </script>
+  </body>
