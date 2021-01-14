@@ -17,45 +17,45 @@
        var day = now.getDay();
        var hour = now.getHours();
        var minute = now.getMinutes();
-       var time = minute + 60 * hour;
+       window.time = minute + 60 * hour;
        function GetCurrentClass() {
-         if (time < 655) {
+         if (window.time < 655) {
            window.result = "early";
          }
-         if (time >= 655 && time < 675) {
+         if (window.time >= 655 && window.time < 675) {
            window.result = "advisory";
          }
-         if (time >= 675 && time < 680) {
+         if (window.time >= 675 && window.time < 680) {
           window.result = "between classes";
          }
-         if (time >= 680 && time < 725) {
+         if (window.time >= 680 && window.time < 725) {
           window.result = "Class 1";
          }
-         if (time >= 725 && time < 730) {
+         if (window.time >= 725 && window.time < 730) {
           window.result = "between classes";
          }
-         if (time >= 730 && time < 775) {
+         if (window.time >= 730 && window.time < 775) {
           window.result = "Class 2";
          }
-         if (time >= 775 && time < 780) {
+         if (window.time >= 775 && window.time < 780) {
           window.result = "between classes";
          }
-         if (time >= 780 && time < 825) {
+         if (window.time >= 780 && window.time < 825) {
           window.result = "Class 3";
          }
-         if (time >= 825 && time < 830) {
+         if (window.time >= 825 && window.time < 830) {
           window.result = "between classes";
          }
-         if (time >= 830 && time < 875) {
+         if (window.time >= 830 && window.time < 875) {
           window.result = "Class 4";
          }
-         if (time >= 875) {
+         if (window.time >= 875) {
           window.result = "after school"
          }
        }
        if (day > 0 && day < 5) {
        GetCurrentClass();
-       } else if (day == 6) {
+       } else if (window.day == 6) {
         window.result = "friday";
        } else {
         window.result = "no meetings today";
