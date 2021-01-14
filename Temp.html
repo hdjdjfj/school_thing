@@ -60,10 +60,10 @@
         window.result = "no meetings today";
        }
        function addElement() {
-        const result = document.createElement("div");
+        const resultText = document.createElement("div");
         const newContent = document.createTextNode(window.result);
-        result.appendChild(newContent);
-        document.body.appendChild(result);
+        resultText.appendChild(newContent);
+        document.body.appendChild(resultText);
        }
        document.body.onload = addElement();
       </script>
