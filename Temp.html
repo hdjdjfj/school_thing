@@ -19,22 +19,22 @@
         var minute = now.getMinutes();
         window.time = minute + 60 * hour;
         function GetCurrentClass() {
-            if (window.time < 655) {
+            if (window.time < 635) {
                 window.result = "early";
             }
-            if (window.time >= 655 && window.time < 675) {
+            if (window.time >= 635 && window.time < 655) {
                 window.result = "advisory";
             }
-            if (window.time >= 675 && window.time < 680) {
+            if (window.time >= 655 && window.time < 660) {
                 window.result = "between classes";
             }
-            if (window.time >= 680 && window.time < 725) {
+            if (window.time >= 660 && window.time < 705) {
                 window.result = "Class 1";
             }
-            if (window.time >= 725 && window.time < 730) {
+            if (window.time >= 705 && window.time < 710) {
                 window.result = "between classes";
             }
-            if (window.time >= 730 && window.time < 775) {
+            if (window.time >= 710 && window.time < 775) {
                 window.result = "Class 2";
             }
             if (window.time >= 775 && window.time < 780) {
